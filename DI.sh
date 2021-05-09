@@ -49,6 +49,7 @@ n=`expr $n + 1`
 done 
 
 ncl step1c_judge.ncl 
+sed -i '3c  run_hours                           = 0,' namelist.input
 sed -i '9c  start_hour                          = 12,   12,   12,' namelist.input 
 sed -i '80,99d' namelist.input 
 sed -i '1c 19.5' bogusvortex.txt 
